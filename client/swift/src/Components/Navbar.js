@@ -9,7 +9,7 @@ function Navbar() {
                 <Link to="/" className="flex text-gray-500 " >Home </Link>
                 <Link to="/settings" className="flex text-gray-500">Settings </Link>
             </div>
-            
+    
         </header>
     )
 }
