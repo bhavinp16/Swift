@@ -25,7 +25,7 @@ function Col1row1() {
                     <i className="text-xl text-gray-500 material-icons">subject</i>
                 </button>
     
-                <div className=" hidden flex-col justify-center bg-gray-500 rounded rounded-lg p-2 mt-1 " id="dropdownm">
+                <div className=" hidden flex-col mt-8 absolute justify-center bg-gray-500 rounded rounded-lg p-2 mt-1 " id="dropdownm">
                     <a href="/login" className="text-gray-900 text-sm rounded hover:bg-gray-600" >Sign out</a>
                     <a href="/settings/user" className="text-gray-900 text-sm rounded hover:bg-gray-600">Status</a>
                 </div>
