@@ -7,12 +7,12 @@ function Col1row1() {
         <div className="flex justify-between m-2">
 
             <Link to="/settings" >
-                <i className="text-xl text-gray-500 material-icons">settings </i>
+                <i className="text-xl text-gray-500 material-icons hover:text-gray-200">settings </i>
             </Link>
 
 
             <div className="flex flex-col justify-right items-end">
-                <button type="button" onClick={(()=>{
+                <button className="focus:outline-none " type="button" onClick={(()=>{
                         const elemd = document.querySelector('#dropdownm');
                         if(elemd.classList.contains('hidden')){
                             elemd.classList.remove('hidden');
@@ -22,12 +22,12 @@ function Col1row1() {
                             elemd.classList.add('hidden');
                         }
                     })}>
-                    <i className="text-xl text-gray-500 material-icons">subject</i>
+                    <i className="text-xl text-gray-500 material-icons hover:text-gray-200">subject</i>
                 </button>
     
                 <div className=" hidden flex-col mt-8 absolute justify-center bg-gray-500 rounded rounded-lg p-2 mt-1 " id="dropdownm">
-                    <a href="/login" className="text-gray-900 text-sm rounded hover:bg-gray-600" >Sign out</a>
-                    <a href="/settings/user" className="text-gray-900 text-sm rounded hover:bg-gray-600">Status</a>
+                    <a href="/login" className="text-gray-200 text-sm rounded hover:text-gray-800 " >Sign out</a>
+                    <a href="/settings/user" className="text-gray-200 text-sm rounded hover:text-gray-800">Status</a>
                 </div>
             </div>
 

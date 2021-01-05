@@ -9,6 +9,7 @@ function FirstCol() {
             <Col1row1 /> 
             <Col1profile />
             <Col1selections />
+           
         </div>
     )
 }
