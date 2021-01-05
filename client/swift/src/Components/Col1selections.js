@@ -20,10 +20,10 @@ function Col1selections() {
     }
 
     return (
-        <div className="flex flex-col justify-begin mt-12 bg-gray-800 w-full ">
-            <button className="text-gray-200 w-full mt-2 hover:bg-gray-700 text-md mx-2 flex justify-begin px-3 py-2 focus:outline-none focus:bg-gray-700 rounded rounded-lg" onClick={maildropb}><i className="material-icons">mail</i> <p className="ml-2">MailBox</p> </button>
+        <div className="flex flex-col justify-begin mt-12 bg-gray-800 ">
+            <button className="text-gray-200  mt-2 hover:bg-gray-700 text-md mx-2 flex justify-begin px-3 py-2 focus:outline-none focus:bg-gray-700 rounded rounded-lg" onClick={maildropb}><i className="material-icons">mail</i> <p className="ml-2">MailBox</p> </button>
 
-            <button className="text-gray-200 w-full mt-1 mb-2 hover:bg-gray-700 focus:bg-gray-700 text-md mx-2 flex justify-begin px-3 py-2 focus:outline-none flex justify-between rounded rounded-lg" onClick={conversationb}>
+            <button className="text-gray-200 mt-1 mb-2 hover:bg-gray-700 focus:bg-gray-700 text-md mx-2 flex justify-begin px-3 py-2 focus:outline-none flex justify-between rounded rounded-lg" onClick={conversationb}>
             <div className="flex "><i className="material-icons">filter_list</i><p className="ml-2">Conversations</p> </div>
             <i class="material-icons ">arrow_drop_down</i> </button>
 

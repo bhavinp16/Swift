@@ -8,7 +8,7 @@ function Home() {
         <div>
             <div className="flex flex-row h-screen">    
                 <FirstCol/>
-                <SecondCol/>
+                <SecondCol />
                 <LastCol/>
             </div>
         </div>
