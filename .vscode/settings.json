@@ -2,5 +2,7 @@
     "editor.fontSize": 16,
     "prettier.tabWidth": 4,
     "prettier.packageManager": "yarn",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "html.format.indentInnerHtml": true,
+    "prettier.useTabs": true
 }
