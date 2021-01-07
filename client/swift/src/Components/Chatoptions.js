@@ -3,11 +3,22 @@ import Chatoptionschat from './Chatoptionschat'
 
 function Chatoptions() {
     return (
-        <div>
+        <div className="overflow-y-auto">
             <Chatoptionschat />
             <Chatoptionschat />
             <Chatoptionschat />
-
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
+            <Chatoptionschat />
         </div>
     )
 }

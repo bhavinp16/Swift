@@ -10,8 +10,10 @@ function App() {
 			<Router>
 				<div className="container">
 					<Switch>
-						<Route exact path="/" component={Home}/>
-						<Route exact path="/settings" component={Settgs} />
+						<Route exact path="/" />   
+							{/*here exact added so / this will not render in /chat or /settings also as / is also present there  */}
+						<Route path="/chat" component={Home}/>
+						<Route path="/settings" component={Settgs} />
 					</Switch>
 				</div>
 

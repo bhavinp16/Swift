@@ -4,9 +4,9 @@ import Secondcoltopbar from './Secondcoltopbar'
 
 function SecondCol() {
     return (
-        <div className="border border-gray-300 w-2/6">
-            <Secondcoltopbar type='Friends' chatnos='124' />
-            <Chatoptions/>
+        <div className="flex flex-col border border-gray-300 w-2/6 h-full">
+            <Secondcoltopbar />
+            <Chatoptions />
         </div>
     )
 }

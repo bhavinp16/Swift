@@ -1,15 +1,12 @@
 import React, { Fragment } from 'react'
-import Navbar from './Navbar'
+import Chatheader from './Chatheader'
 
 function LastCol() {
-    return (	
-        <Fragment>		
-        <div className="w-3/6">
-            <Navbar/>
-            <div className="container mt-12">
-                last
-            </div>   
-        </div>
+    return (
+        <Fragment>
+            <div className="w-3/6">
+                <Chatheader />
+            </div>
         </Fragment>
     )
 }
