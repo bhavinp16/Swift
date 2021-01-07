@@ -5,9 +5,9 @@ function Chatheader() {
     const onlinestatec = 'green';
 
     return (
-        <header className="flex mb-1 h-24 border border-l-0 border-gray-300 p-6 pr-0 items-center justify-between w-full">
+        <header className="flex mb-1 h-24 border border-l-0 border-gray-300 p-6 pr-0 items-center justify-between w-full shadow-md">
             <div className="flex">
-                <img src="https://images.megapixl.com/4707/47075253.jpg" alt="#" className="ml-6 h-12 w-12 rounded rounded-full ring-2 ring-gray-400 mr-6 flex items-center " />
+                <img src="https://images.megapixl.com/4707/47075253.jpg" alt="#" className="ml-6 h-12 w-12 rounded-full ring-2 ring-gray-400 mr-6 flex items-center " />
                 <div >
                     <p className="text-gray-800 font-sans font-semibold text-lg ">  Contact1 </p>
                     <div className="flex justify-center items-center">

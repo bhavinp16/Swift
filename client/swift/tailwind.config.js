@@ -5,6 +5,11 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      backgroundImage: theme => ({
+        'bgimage1': "url('/src/styles/bgimg.png')",
+      })
+    },
     screens: {
       sm: '640px',
       md: '768px',
