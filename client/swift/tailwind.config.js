@@ -8,7 +8,10 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'bgimage1': "url('/src/styles/bgimg.png')",
-      })
+      }),
+      width: {
+        'fit-content': 'fit-content'
+      },
     },
     screens: {
       sm: '640px',

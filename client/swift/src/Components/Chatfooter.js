@@ -11,8 +11,12 @@ function Chatfooter() {
                     <i className="material-icons  text-gray-400 hover:text-gray-800">attach_file</i>
                 </button>
 
-                <input type="text" placeholder="Type the message here " className="h-12 w-full border border-gray-200 rounded-full focus:outline-none mx-4 px-8 shadow-lg" /></div>
+                <input type="text" placeholder="Type the message here " className="h-12 w-full border border-gray-200 rounded-l-full focus:outline-none ml-4 px-8 shadow-lg" />
+                <button className="pr-2 focus:outline-none">
+                    <i className="material-icons border border-gray-200 px-4 py-3 pl-3 rounded-r-full shadow-md  text-gray-600 hover:text-gray-900 border-l-0">send </i>
+                </button>
 
+            </div>
         </div>
     )
 }
