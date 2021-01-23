@@ -1,24 +1,13 @@
 import React from 'react'
 import Chatoptionschat from './Chatoptionschat'
 
-function Chatoptions() {
+
+function Chatoptions({rooms}) {
+
     return (
         <div className="overflow-y-auto shadow-lg">
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
-            <Chatoptionschat />
+            {rooms.map(room => (<Chatoptionschat key={room.id} id={room.id} name={room.data.name} />
+            ))}
         </div>
     )
 }

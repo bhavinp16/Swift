@@ -11,7 +11,7 @@ function Home() {
                 <FirstCol />
                 <SecondCol />
                 <Switch>
-                    <Route path="/chat/:userid" component={LastCol} />
+                    <Route path="/chat/:chatid" component={LastCol} />
                 </Switch>
                
             </div>

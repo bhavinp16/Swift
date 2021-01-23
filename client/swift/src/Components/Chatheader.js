@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Chatheader() {
+function Chatheader({ roomname }) {
     const onlinestate = 'up';
     const onlinestatec = 'green';
 
@@ -9,7 +9,7 @@ function Chatheader() {
             <div className="flex">
                 <img src="https://images.megapixl.com/4707/47075253.jpg" alt="#" className="ml-6 h-12 w-12 rounded-full ring-2 ring-gray-400 mr-6 flex items-center " />
                 <div >
-                    <p className="text-gray-800 font-sans font-semibold text-lg ">  Contact1 </p>
+                    <p className="text-gray-800 font-sans font-semibold text-lg ">  {roomname} </p>
                     <div className="flex justify-center items-center">
                         <p className="text-gray-400 font-sans font-semibold text-sm">  online</p>
                         <i className={`material-icons text-${onlinestatec}-600`}> arrow_drop_{onlinestate} </i>
