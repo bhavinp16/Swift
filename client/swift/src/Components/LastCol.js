@@ -7,9 +7,7 @@ import { useParams } from 'react-router-dom'
 
 function LastCol() {
     const [roomname, setroomname] = useState("");
-    // const [input, setinput] = useState([]);
-    const { chatid } = useParams();
-    console.log(chatid);
+    const { chatid } = useParams(); // here chatid name must match what we gave in url i.e ../:chatid 
 
     useEffect(() => {
         if (chatid) {

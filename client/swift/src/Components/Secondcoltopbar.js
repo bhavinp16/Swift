@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import db from '../firebase';
 
 function Secondcoltopbar({ rooms, setrooms }) {
+    const [filtertxt, setfiltertxt] = useState("");
 
     const addroom = () => {
         const roomname = prompt("Enter the name for the room ");
@@ -11,6 +12,16 @@ function Secondcoltopbar({ rooms, setrooms }) {
             })
         }
     }
+
+    const filterlist = (text) => {
+        setfiltertxt(text.target.value);
+    }
+
+    useEffect(() => {
+        db.collection('rooms').onSnapshot((snapshot) => (
+            snapshot.map()
+        ))
+    }, [filtertxt]) // logic to filter contacts
 
     return (
         <div>
@@ -31,7 +42,7 @@ function Secondcoltopbar({ rooms, setrooms }) {
             {/* search bar */}
             <div className="flex border-b border-gray-300 justify-center items-center p-4 pt-0 pb-1">
                 <i className="material-icons border border-gray-200 p-2 pl-4 pr-1 rounded-l-full shadow-md">search</i>
-                <input type="search" className="shadow-md rounded rounded-r-full my-2 w-full flex p-2 pl-4 border border-l-0 border-bg-gray-100 focus:outline-none text-gray-600 font-semibold" placeholder="Search " spellCheck="false" />
+                <input type="search" className="shadow-md rounded rounded-r-full my-2 w-full flex p-2 pl-4 border border-l-0 border-bg-gray-100 focus:outline-none text-gray-600 font-semibold" placeholder="Search " spellCheck="false" onChange={filterlist} />
             </div>
 
         </div>
