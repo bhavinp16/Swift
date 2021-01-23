@@ -17,11 +17,11 @@ function Secondcoltopbar({ rooms, setrooms }) {
         setfiltertxt(text.target.value);
     }
 
-    useEffect(() => {
-        db.collection('rooms').onSnapshot((snapshot) => (
-            snapshot.map()
-        ))
-    }, [filtertxt]) // logic to filter contacts
+    // useEffect(() => {
+    //     db.collection('rooms').onSnapshot((snapshot) => (
+    //         snapshot.map()
+    //     ))
+    // }, [filtertxt]) // logic to filter contacts
 
     return (
         <div>

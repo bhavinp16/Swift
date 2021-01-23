@@ -10,7 +10,7 @@ function LastCol() {
     const { chatid } = useParams(); // here chatid name must match what we gave in url i.e ../:chatid 
 
     useEffect(() => {
-        if (chatid) {
+        if (chatid) {  //to get roomname for chat header
             db.collection('rooms')
                 .doc(chatid)
                 .onSnapshot(snapshot => (
@@ -23,7 +23,7 @@ function LastCol() {
         <Fragment>
             <div className="flex flex-col w-3/6 h-full justify-begin">
                 <Chatheader roomname={roomname} />
-                <Chatbody />
+                <Chatbody chatid={chatid} />
                 <Chatfooter />
             </div>
         </Fragment>

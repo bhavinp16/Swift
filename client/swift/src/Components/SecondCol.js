@@ -17,15 +17,15 @@ function SecondCol() {
                     }))
                 )
             });
-            
-            return () => {
-                unsubscribe();
-            }
+
+        return () => {
+            unsubscribe();
+        }
     }, [])
 
     return (
         <div className="flex flex-col border border-gray-300 w-2/6 h-full">
-            <Secondcoltopbar rooms={rooms} setrooms={setrooms}/>
+            <Secondcoltopbar rooms={rooms} setrooms={setrooms} />
             <Chatoptions rooms={rooms} />
         </div>
     )
