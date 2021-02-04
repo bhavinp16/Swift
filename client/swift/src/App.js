@@ -1,13 +1,26 @@
-import React, { Fragment, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React, { Fragment, useContext } from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './pages/Home';
 import Settgs from './pages/Settgs';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import usercontext from './Context/usercontext';
+import { auth } from './firebase';
 
 
 function App() {
-	const [user, setuser] = useState(null);
+	const context = useContext(usercontext)
+	const { user, setuser } = context;
+
+	setuser(auth.currentUser)
+
+
+	auth.onAuthStateChanged(function (user) {
+		if (user) {
+			setuser(user)
+		}
+	})
+
 
 	return (
 		<Fragment>
@@ -17,8 +30,8 @@ function App() {
 						{!user ?
 							(
 								<Switch>
-									<Route path="/login" component={Login}/>
-									<Route path="/signup" component={Signup}/>
+									<Route path="/login" component={Login} />
+									<Route path="/signup" component={Signup} />
 								</Switch>
 							) :
 							(

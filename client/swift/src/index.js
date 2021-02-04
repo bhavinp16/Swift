@@ -4,10 +4,13 @@ import './styles/main.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import UserState from './Context/UserState';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UserState>
+      <App />
+    </UserState>
   </React.StrictMode>,
   document.getElementById('root')
 );
