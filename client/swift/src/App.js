@@ -27,7 +27,7 @@ function App() {
 			<Router>
 				<div className="container">
 					<Switch>
-						{!user ?
+						{!user ?   // to show content as per login status
 							(
 								<Switch>
 									<Route path="/login" component={Login} />
@@ -42,6 +42,12 @@ function App() {
 								</>
 							)}
 					</Switch>
+
+					{!user ?  //to redirect as per loginstatus
+						(<Redirect to="/login" />)
+						:
+						(<Redirect to="/chat" />)
+					}
 				</div>
 
 			</Router>

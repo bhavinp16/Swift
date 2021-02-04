@@ -1,11 +1,11 @@
-import React, {useState, useContext} from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useContext } from 'react'
+import { Link, Redirect } from 'react-router-dom'
 import usercontext from '../Context/usercontext'
 import { auth } from '../firebase'
 
 function Login() {
     const context = useContext(usercontext)
-    const {user, setuser} = context
+    const { user, setuser } = context
 
     const initialState = {
         email: "",
@@ -29,7 +29,8 @@ function Login() {
                 var user = userCredential.user;
                 // change user state in context
                 setuser(user)
-                console.log(user)
+                console.log(user);
+                <Redirect to="/chat" />;
             })
             .catch((error) => {
                 var errorCode = error.code;
