@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Chatmsgothers from './Chatmsgothers'
-import Chatmsgours from './Chatmsgours'
 import db from '../firebase'
+import Chatmsgs from './Chatmsgs';
 
 function Chatbody({ chatid }) {
     const [messages, setmessages] = useState([]);
@@ -17,8 +16,7 @@ function Chatbody({ chatid }) {
 
     return (
         <div className="bg-bgimage1 h-4/5 overflow-y-auto">
-            <Chatmsgothers messages={messages} />
-            <Chatmsgours messages={messages} />
+            <Chatmsgs messages={messages} />
         </div>
     )
 }

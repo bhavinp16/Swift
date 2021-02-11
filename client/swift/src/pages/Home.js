@@ -7,7 +7,7 @@ import SecondCol from '../Components/SecondCol';
 function Home() {
     return (
         <div>
-            <div className="flex flex-row h-screen">
+            <div className="flex flex-row h-screen w-screen">
                 <FirstCol />
                 <SecondCol />
                 <Switch>

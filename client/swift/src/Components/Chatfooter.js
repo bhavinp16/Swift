@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import db from '../firebase';
 import { useParams } from 'react-router-dom';
 import firebase from 'firebase'
+import usercontext from '../Context/usercontext';
 
 function Chatfooter() {
+
+    const context = useContext(usercontext);
+    const {user} = context;
+
     const [input, setinput] = useState("");
 
     const changeinput = (e) => {
@@ -17,7 +22,7 @@ function Chatfooter() {
         if (input !== '') {
             db.collection('rooms').doc(chatid).collection('messages').add({
                 message: input,
-                name: "Bhavin",
+                name: user.email,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                 // name: username,
             });
@@ -36,7 +41,7 @@ function Chatfooter() {
                 <button className="focus:outline-none">
                     <i className="material-icons  text-gray-400 hover:text-gray-800">attach_file</i>
                 </button>
-
+            
                 <input type="text" id="1625" placeholder="Type the message here " className="h-12 w-full border border-gray-200 rounded-l-full focus:outline-none ml-4 px-8 shadow-lg" onChange={changeinput} />
 
                 <button className="pr-2 focus:outline-none" onClick={sendf}>
